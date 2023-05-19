@@ -1,52 +1,612 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
-	content: '';
-	content: none;
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Do not write a css rule above here! Use the space below  */
 
-
 /* Write your css below here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: inherit;
+    color: inherit;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #101010;
+    color: #f7f7f7;
+}
+
+header {
+    padding: 1rem;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left h1 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 1.7rem;
+}
+
+.left h1::after {
+    content: "Matrix";
+    color: wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.left img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform .5s ease-in;
+}
+
+.left img:hover {
+    transform: rotate(360deg);
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: scaleY(0);
+    padding: 1rem 2rem;
+    border-top: 0.2rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+}
+
+input {
+    display: none;
+}
+
+nav a {
+    margin: 2rem 1rem 1rem;
+    color: indigo;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+nav a:hover {
+    color: #2ecc71;
+}
+
+input:checked ~ nav {
+    transform: scaleY(1);
+    transition: all 0.2s linear;
+}
+
+input:checked ~ label::before {
+    content: "\f00d";
+}
+
+label {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+main section.intro {
+    padding: 8rem 5rem 5rem;
+    background-color: #333;
+    background: linear-gradient(to right, #222222, #333333);
+    box-shadow: 0 2px 3px 0px #111;
+    opacity: 0;
+    animation: slide-in 1s 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+section.intro h4 {
+    color: #fcfc;
+    letter-spacing: 0.3rem;
+}
+
+section.intro h1 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+section.intro h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.aboutme {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.aboutme, .services, .skills {
+    background-color: #191919 ;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.services, .project {
+    padding-top: .2rem;
+}
+
+.aboutme .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 100%;
+    height: 30rem;
+    border-radius: 50%;
+    background: #000;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.about-text {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.about-text h5 {
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.about-text span {
+    color: wheat;
+}
+
+.about-text p {
+    padding: 14px;
+    text-align: center;
+    max-width: 100%;
+    color: #fcfc;
+    line-height: 22px;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.project {
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.skills {
+    background-color: #101010;
+}
+.title h2 {
+    font-size: 1.3rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.pra {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: auto;
+    color: #fcfc;
+}
+
+.grid-box {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+     grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191919;
+    border-radius: 7px;
+}
+
+.box .cards {
+    background-color: #101010;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card > p {
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.box .skill-card {
+    min-height: 350px;
+}
+.skill-card ol li {
+    list-style-type: none;
+}
+.cardss ol li {
+    list-style-type: square;
+    text-align: left;
+    padding: 5px 1px;
+    font-size: 22px;
+}
+.card span {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: #f9004d;
+}
+
+ol li span.material-icons-outlined {
+    color:#fcfc ;
+
+}
+.card h5 {
+    font-size: 1.5rem;
+    margin-bottom: auto;
+}
+
+.card p a {
+    background-color: #f9004d;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+.card p a:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+
+.box #crud, .card {
+    min-height: 450px;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #191919;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer p:nth-child(1){
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.socials{
+    display: flex;
+}
+
+.socials a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.socials a > img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.socials a:first-child img {
+    scale: 1.5;
+}
+
+.socials a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.end{
+    position: absolute;
+    color: #f9004d;
+    bottom: 12px;
+    font-size: 14px
+}
+
+@media screen and (max-width: 330px) {
+    .left h1,
+    label {
+        font-size: 1rem;
+    }
+    .left img {
+        width: 40px;
+    }
+
+    .card h5 {
+        font-size: 1rem;
+    }
+
+    main section.intro {
+        padding: 3rem 1rem 2rem;
+    }
+
+    section.intro h1 {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    section.intro h3 {
+        margin-bottom: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    label {
+        visibility: hidden;
+    }
+
+    nav {
+        transform: scaleY(1);
+        position: relative;
+        width: initial;
+        flex-direction: row;
+        background-color: initial;
+        border: none;
+        box-shadow: none;
+    }
+
+    nav a {
+        margin: 0 1rem;
+        color: #fcfc;
+    }
+
+    nav a:hover {
+        color: wheat;
+    }
+
+    section.intro h4 {
+        color: #fcfc;
+        letter-spacing: 0.3rem;
+    }
+
+    section.intro h1 {
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+
+    section.intro h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .img-container {
+        width: 50%;
+    }
+
+    .grid-box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+        /* width: 11rem;
+        margin: 2rem auto; */
+    }
+    .skill-title .skill {
+        min-width: 400px;
+        text-align: left;
+    }
+
+    .card h5 {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .about-text {
+        width: 50%;
+    }
+
+    .grid-box {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
