@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Task 6 | My Portfolio</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="left">
+                    <img src="./images/IG-Logo.png" alt="Ig-logo" />
+                    <h1>IG</h1>
+                </div>
+                <input type="checkbox" id="menu-bar" />
+                <label for="menu-bar" class="fas fa-bars"></label>
+                <nav>
+                    <a href="#aboutme">About</a>
+                    <a href="#project">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </header>
+            <main>
+                <section class="intro" id="intro">
+                    <div class="intro-left">
+                        <h4>Hello, my name is</h4>
+                        <h1>Omoma Ighawosa</h1>
+                        <h3>I am a Web Developer</h3>
+                    </div>
+                </section>
+                <section class="aboutme" id="aboutme">
+                    <div class="about">
+                        <div class="img-container">
+                            <img
+                                src="./images/Ig-lmTech.jpeg"
+                                alt="My picture"
+                            />
+                        </div>
+                        <div class="about-text">
+                            <h2>About Me</h2>
+                            <h5>Developer <span>& Tutor</span></h5>
+                            <p class="about-text-p">
+                                I'm a frontend developer and math/science tutor.
+                                I create captivating websites and excel at
+                                teaching complex concepts. Continuous learning
+                                keeps me at the forefront of industry trends,
+                                ensuring high-quality solutions with a
+                                user-centric approach.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!--  -->
+                <section class="project" id="project">
+                    <div class="title">
+                        <h2 class="projects">My Projects</h2>
+                    </div>
+
+                    <div class="grid-box">
+                        <div class="box">
+                            <div class="card">
+                                <span class="material-icons-outlined">
+                                    account_tree
+                                </span>
+                                <h5>Best App Landing Page</h5>
+                                <div class="pra">
+                                    <p>
+                                        A demo app selling webpage with nice
+                                        features built exclusively with HTML and
+                                        CSS only
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="https://ig-matrix.github.io/BestApp-landing-page/#">View</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card">
+                                <span class="material-icons-outlined">
+                                    account_tree
+                                </span>
+                                <h5>FCC Page Clone</h5>
+                                <div class="pra">
+                                    <p>
+                                        A clone of the Free code camp homepage
+                                        built using HTML and CSS
+                                    </p>
+                                </div>
+                                <p><a href="https://ig-matrix.github.io/Lesson_3_Final_Task_Omoma_Ighawosa/">View</a></p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card" id="crud">
+                                <span class="material-icons-outlined">
+                                    account_tree
+                                </span>
+                                <h5>Django CRUD Project</h5>
+                                <div class="pra">
+                                    <p>
+                                        A web app capable of performing CRUD
+                                        (Create, Read, Update & Delete)
+                                        operations. These are the four basic
+                                        operations which are executed on
+                                        Database Models.
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="https://github.com/Ig-Matrix/django_CRUD-ZURI">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="services" id="services">
+                    <div class="title">
+                        <h2 class="projects">My Services</h2>
+                    </div>
+                    <div class="grid-box">
+                        <div class="box">
+                            <div class="card cards">
+                                <span class="material-icons-outlined">code </span>
+                                <h5>Web Development</h5>
+                                <div class="pra">
+                                    <p>
+                                        Every website should be built with two
+                                        primary goals: Firstly, it needs to work
+                                        across all devices. Secondly, it needs
+                                        to be fast as possible.
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="#">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card cards">
+                                <span class="material-icons-outlined">school</span>
+                                <h5>Tutoring</h5>
+                                <div class="pra">
+                                    <p>
+                                        I am a Physics & Mathematics Instructor.
+                                        I also mentor and tutor students and
+                                        youths on Digital Skills
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="#">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card cards">
+                                <span class="material-icons-outlined">engineering</span>
+                                <h5>Electrical wiring</h5>
+                                <div class="pra">
+                                    <p>
+                                        Experienced electrical engineer
+                                        specializing in designing and
+                                        implementing efficient electrical
+                                        systems. Committed to delivering
+                                        sustainable solutions and staying
+                                        up-to-date with emerging technologies.
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="#">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="skills" id="skills">
+                    <div class="title skill-title">
+                        <h2 class="skill">Skills, Hobbies & Priorities</h2>
+                    </div>
+                    <div class="grid-box">
+                        <div class="box">
+                            <div class="card skill-card">
+                                <span class="material-icons-outlined">
+                                    build
+                                </span>
+                                <h5>Skills</h5>
+                                <div class="pra">
+                                    <ol>
+                                        <li>
+                                            <span class="material-icons-outlined">html</span>
+                                        </li>
+                                        <li>
+                                            <span class="material-icons-outlined">css</span>
+                                        </li>
+                                        <li>
+                                            <span class="material-icons-outlined">javascript</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card cardss">
+                                <span class="material-icons-outlined">sports_baseball</span>
+                                <h5>Hobbies</h5>
+                                <div class="pra">
+                                    <ol>
+                                        <li>Football</li>
+                                        <li>Travelling</li>
+                                        <li>Teaching</li>
+                                        <li>Reading/Research</li>
+                                        <li>Baking/Cooking</li>
+                                        <li>Networking</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="card cardss">
+                                <span class="material-icons-outlined">priority_high</span>
+                                <h5>Priorities</h5>
+                                <div class="pra">
+                                    <ol>
+                                        <li>Efficiency</li>
+                                        <li>Collaboration</li>
+                                        <li>Innovation</li>
+                                        <li>Quality</li>
+                                        <li>Client Satisfaction</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>Omoma Ighawosa</p>
+                <p>Lets connect on my socials below:</p>
+                <div class="socials">
+                    <a href="https://github.com/Ig-Matrix">
+                        <img
+                            src="./images/GitHub-Mark-icon-removebg-preview.png"
+                            alt="GitHub-Mark-icon" />
+                    </a>
+                    <a href="https://twitter.com/i_am_Ig_matrix?t=QM5cAZbU5i5VVxdXRi_ePA&s=09">
+                        <img
+                            src="./images/twitter-logo-icon.png"
+                            alt="Twitter logo" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/ighawosa-omoma-5070a721b">
+                        <img
+                            src="./images/linkedin icon.png"
+                            alt="linkedin logo"/>
+                    </a>
+                </div>
+                <p class="end">&copy; copyright @ 2023 by Omoma Ig-matrix</p>
+            </footer>
+        </div>
+    </body>
+</html>
