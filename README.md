@@ -1,6 +1,6 @@
 ##CSS Task 6 | My Portfolio
 
-Link To live site : 
+Link To live site : https://ig-matrix.github.io/Lesson_3_Task_6_Omoma_Ighawosa/
 
 ##How to run/test this project
 
